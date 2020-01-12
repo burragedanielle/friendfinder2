@@ -46,6 +46,7 @@ module.exports = function (app) {
             }
 
             friendIndex = differenceScores.indexOf(leastDifference);
+            console.log(friendIndex);
         }
 
         bestMatch.name = friends[friendIndex].name;

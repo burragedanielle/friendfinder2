@@ -38,7 +38,7 @@
                     <label for="first_name">What's your name?</label>
                 </div>
                 <div class='input-field col s12'>
-                    <textarea id="photo" class="materialize-textarea"></textarea>
+                    <textarea id="photo" class="materialize-textarea validate"></textarea>
                     <label for="photo">Photo Link</label>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 <div class="row question-block">
                     <h5>The human has left! What do you do first?</h5>
                     <div class='input-field col s12'>
-                        <select id='question-1'>
+                        <select id='question-2'>
                             <option value="" disabled selected>Choose your option</option>
                             <option value='1'>Get cozy on the bed or sofa. Wherever I'm not supposed to lay.</option>
                             <option value='2'>Pout by the door. Maybe if they hear my cries they'll return...</option>
@@ -92,7 +92,7 @@
                 <div class="row question-block">
                     <h5>What's the scariest noise?</h5>
                     <div class='input-field col s12'>
-                        <select id='question-3'>
+                        <select id='question-4'>
                             <option value="" disabled selected>Choose your option</option>
                             <option value='1'>Mother nature's wrath! Thunder and lightening!</option>
                             <option value='2'>We can avoid using the vacuum cleaner forever...right?</option>
@@ -110,7 +110,7 @@
                         manners?
                     </h5>
                     <div class='input-field col s12'>
-                        <select id='question-3'>
+                        <select id='question-5'>
                             <option value="" disabled selected>Choose your option</option>
                             <option value='1'>Can't control the hunter in me. A squirrel or rabbit!</option>
                             <option value='2'>Smells! Smells! Smells!</option>
@@ -228,13 +228,13 @@
     <!-- MATERIALIZE JAVASCRIPT -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(() => {
             $('select').formSelect();
 
             var elem = document.querySelector('#modal1');
             var instances = M.Modal.init(elem);
 
-            $('#submit').on('click', function (e) {
+            $('#submit').on('click', (e) => {
                 e.preventDefault();
 
                 let userData = {
@@ -244,10 +244,12 @@
                         $('#question-1').val(),
                         $('#question-2').val(),
                         $('#question-3').val(),
+                        $('#question-4').val(),
+                        $('#question-5').val(),
                     ]
                 }
 
-                $.post('/api/friends', userData, function (data) {
+                $.post('/api/friends', userData, (data) => {
                     console.log(userData);
                     console.log(data);
                     $('#match-name').text(data.name);
@@ -257,6 +259,7 @@
                 });
             });
         });
+
     </script>
 </body>
 
