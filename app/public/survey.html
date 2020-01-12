@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FriendFinder</title>
+
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="styles.css" type="text/css"> -->
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <div class="jumbotron row">
+            <div class="center-align">
+                <h2>Survey Questions</h2>
+            </div>
+        </div>
+        <div class='container'>
+
+
+            <!-- Name and Photo -->
+            <div class="information-input">
+                <div class='input-field col s12'>
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">What's your name?</label>
+                </div>
+                <div class='input-field col s12'>
+                    <textarea id="photo" class="materialize-textarea"></textarea>
+                    <label for="photo">Photo Link</label>
+                </div>
+            </div>
+
+            <!-- Questions -->
+            <div class="survey-questions">
+                <div class="row question-block">
+                    <h5>Your human says, "Let's Go For A Ride." In a perfect
+                        world, where are you headed?</h5>
+                    <div class='input-field col s12'>
+                        <select id='question-1'>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value='1'>The dog park to play with friends</option>
+                            <option value='2'>The pet store! I want to see the latest treats and toys.</option>
+                            <option value='3'>I've been needing a spa day. Let's go to the groomers.</option>
+                            <option value='4'>I need to stretch my legs! Let's go hiking!</option>
+                            <option value='5'>'Content goes here'</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row question-block">
+                    <h5>The human has left! What do you do first?</h5>
+                    <div class='input-field col s12'>
+                        <select id='question-1'>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value='1'>Get cozy on the bed or sofa. Wherever I'm not supposed to lay.</option>
+                            <option value='2'>Pout by the door. Maybe if they hear my cries they'll return...</option>
+                            <option value='3'>Head to my bed and sleep. When I wake up, they'll be back.</option>
+                            <option value='4'>Patrol the perimeter! It's my duty to bark at any potential threats.
+                            </option>
+                            <option value='5'>Being alone makes me nervous. Is there anthing to chew on?</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row question-block">
+                    <h5>Treat time! What's your favorite food?</h5>
+                    <div class='input-field col s12'>
+                        <select id='question-3'>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value='1'>I prefer the finer things in life. Steak.</option>
+                            <option value='2'>Peanut butter in a kong. I like a challenge.</option>
+                            <option value='3'>Quick, easy and delicious! Hotdogs!</option>
+                            <option value='4'>I'll take whatever, even if it came from the trashcan.</option>
+                            <option value='5'>I'm simple. I'll take whatever's on your plate.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row question-block">
+                    <h5>What's the scariest noise?</h5>
+                    <div class='input-field col s12'>
+                        <select id='question-3'>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value='1'>Mother nature's wrath! Thunder and lightening!</option>
+                            <option value='2'>We can avoid using the vacuum cleaner forever...right?</option>
+                            <option value='3'>I hate the Fourth of July. Fireworks!</option>
+                            <option value='4'>I can't stand conflict - dogs (and humans) barking really upsets me.
+                            </option>
+                            <option value='5'>Pffft... I'm not afraid of anything.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row question-block">
+                    <h5>You're on a walk. We all can't be perfect - what
+                        will make you forget your leash
+                        manners?
+                    </h5>
+                    <div class='input-field col s12'>
+                        <select id='question-3'>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value='1'>Can't control the hunter in me. A squirrel or rabbit!</option>
+                            <option value='2'>Smells! Smells! Smells!</option>
+                            <option value='3'>New people and dogs! Can't fault friendly!</option>
+                            <option value='4'>Bikes and cars. Slow down!</option>
+                            <option value='5'>Leash manners? What's that?</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row center-align">
+                <a id='submit' class="waves-effect waves-light btn modal-trigger cyan darken-2"
+                    data-target='modal1'>Find
+                    Your
+                    Match<i class="material-icons right">pets</i></a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id='modal1' class='modal'>
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p id='match-name'></p>
+                <img id='match-photo'></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer center-align cyan darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p class="foot-text">Made for my socially awkward dog Delilah<i
+                            class="tiny material-icons">favorite</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        label:active {
+            border-bottom: 1px solid #0097a7;
+            box-shadow: 0 1px 0 0 #0097a7;
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly])+label,
+        textarea.materialize-textarea:focus:not([readonly])+label {
+            color: #0097a7;
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #0097a7;
+            box-shadow: 0 1px 0 0 #0097a7;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        .jumbotron {
+            padding: 5rem;
+            background-color: #4dd0e1;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            backdrop-filter: blur(2px);
+        }
+
+        .dropdown-content li>span {
+            color: #0097a7;
+        }
+
+        .select-wrapper input.select-dropdown:active {
+            border-bottom: 1px solid #0097a7;
+        }
+
+        .survey-questions {
+            margin-top: 40px;
+        }
+
+        .question-number {
+            text-transform: uppercase;
+        }
+
+        .btn {
+            border-radius: 30px;
+        }
+
+        .foot-text {
+            font-size: .8rem;
+        }
+    </style>
+
+    <!-- MATERIALIZE JAVASCRIPT -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+
+            var elem = document.querySelector('#modal1');
+            var instances = M.Modal.init(elem);
+
+            $('#submit').on('click', function (e) {
+                e.preventDefault();
+
+                let userData = {
+                    name: $('#first_name').val().trim(),
+                    photo: $('#photo').val().trim(),
+                    score: [
+                        $('#question-1').val(),
+                        $('#question-2').val(),
+                        $('#question-3').val(),
+                    ]
+                }
+
+                $.post('/api/friends', userData, function (data) {
+                    console.log(userData);
+                    console.log(data);
+                    $('#match-name').text(data.name);
+                    $("#match-photo").attr("src", data.photo);
+                    let instance = M.Modal.getInstance(elem);
+                    instance.open();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
