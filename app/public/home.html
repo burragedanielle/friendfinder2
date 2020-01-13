@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display&display=swap" rel="stylesheet">
 
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,13 +17,134 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>FriendFinder</title>
+    <title>DogPark</title>
 </head>
 
 <body>
+    <div class="main-image valign-wrapper">
+        <container>
+            <div class="row heading-content center-align">
+                <h2 class="main-page-head">Welcome to DogPark</h2>
+                <h6 class="description">A site where dogs can make dog friends.</h6>
+                <p class="mini-description">Man may be dog's bestfriend, but us dogs need dog friends too! Use this
+                    survey
+                    to find new friends to
+                    meet at the dog park!</p>
+                <a class='main-button waves-effect waves-light btn-large btn z-depth-3 cyan darken-2' href='/survey'>Go
+                    To Survey</a>
+            </div>
+        </container>
+    </div>
 
-    <h2>this is friendfinder</h2>
-    <a class='waves-effect waves-light btn' href='/survey'>Go To Survey</a>
+    <style>
+        * {
+            font-family: 'Fauna One', serif;
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+
+        h6 {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .main-page-head {
+            margin-top: 0px;
+            color: white;
+            text-shadow: 1px 1px 5px #000;
+            font-size: 5.5rem;
+        }
+
+        .main-image {
+            height: 100vh;
+            background-image: linear-gradient(rgba(37, 48, 53, 0.4), rgba(37, 48, 53, 0.4)), url('https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4000&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-button {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .mini-description {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        label:active {
+            border-bottom: 1px solid #0097a7;
+            box-shadow: 0 1px 0 0 #0097a7;
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly])+label,
+        textarea.materialize-textarea:focus:not([readonly])+label {
+            color: #0097a7;
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #0097a7;
+            box-shadow: 0 1px 0 0 #0097a7;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        .jumbotron {
+            padding: 5rem;
+            background-color: #4dd0e1;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            backdrop-filter: blur(2px);
+        }
+
+        .dropdown-content li>span {
+            color: #0097a7;
+        }
+
+        .select-wrapper input.select-dropdown:active {
+            border-bottom: 1px solid #0097a7;
+        }
+
+        .survey-questions {
+            margin-top: 40px;
+        }
+
+        .question-number {
+            text-transform: uppercase;
+        }
+
+        .btn {
+            border-radius: 30px;
+        }
+
+        .foot-text {
+            font-size: .8rem;
+        }
+    </style>
 </body>
 
 </html>

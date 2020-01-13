@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="styles.css" type="text/css"> -->
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
@@ -25,7 +25,8 @@
     <main>
         <div class="jumbotron row">
             <div class="center-align">
-                <h2>Survey Questions</h2>
+                <h2 class="top-head">Q & A</h2>
+                <h6 class="description-head">Let us match you with your new doggie bestfriend.</h6>
             </div>
         </div>
         <div class='container'>
@@ -39,7 +40,7 @@
                 </div>
                 <div class='input-field col s12'>
                     <textarea id="photo" class="materialize-textarea validate"></textarea>
-                    <label for="photo">Photo Link</label>
+                    <label for="photo">Share a photo of yourself!</label>
                 </div>
             </div>
 
@@ -134,7 +135,7 @@
         <!-- Modal -->
         <div id='modal1' class='modal'>
             <div class="modal-content">
-                <h4>Modal Header</h4>
+                <h4>Your new best friend!</h4>
                 <p id='match-name'></p>
                 <img id='match-photo'></p>
             </div>
@@ -155,7 +156,7 @@
 
     <style>
         * {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Fauna One', serif;
         }
 
         h2 {
@@ -182,11 +183,22 @@
         h3,
         h4,
         h5 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
 
         h5 {
             font-size: 1.25rem;
+        }
+
+        .top-head {
+            font-size: 6rem;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .description-head {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 5px #000;
+            margin-top: 2rem;
         }
 
         .jumbotron {

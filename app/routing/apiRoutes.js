@@ -50,7 +50,7 @@ module.exports = function (app) {
         }
 
         bestMatch.name = friends[friendIndex].name;
-        bestMatch.photo = friends[friendIndex].name;
+        bestMatch.photo = friends[friendIndex].photo;
 
         friends.push(userData);
         res.json(bestMatch);
